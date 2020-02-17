@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TheSphereBehaviour : MonoBehaviour
 {
-    public float theSphereSpeed = 1.0f;
+    public float theSphereSpeed = 9.0f;
 
     private Vector3 angle;
     private double timeLastChangeDirection;

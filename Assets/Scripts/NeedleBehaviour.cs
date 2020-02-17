@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NeedleBehaviour : MonoBehaviour
 {
-    public float NeedleSpeed = 1.0f;
+    public float NeedleSpeed = 6.0f;
     
     void Update()
     {
