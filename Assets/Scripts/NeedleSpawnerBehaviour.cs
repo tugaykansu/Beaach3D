@@ -18,44 +18,21 @@ public class NeedleSpawnerBehaviour : MonoBehaviour
     
         void Update()
         {
-            if(!needleMoving && Input.GetMouseButtonDown(0) ){
+            if(!needleMoving && Input.GetMouseButtonDown(0) ){        // shoot
                             needleMoving = true;
                             lastMoveTime = Time.time;
                             iSinstantiated = false;
                             MoveNeedle();
             }
             
-            if(Time.time - lastMoveTime > SpawnPeriod){
+            if(Time.time - lastMoveTime > SpawnPeriod){    // wait for spawn
                             needleMoving = false;
             }
             
-            if ( !needleMoving && !iSinstantiated ){
+            if ( !needleMoving && !iSinstantiated ){    // spawn
                             InstantiateNeedle();
                             iSinstantiated = true;
             }
-            
-            
-            /*if(Time.time - lastMoveTime > SpawnPeriod){
-                needleMoving = false;
-                lastMoveTime = Time.time;
-            }
-            
-            if ( !needleMoving && !iSinstantiated ){
-                InstantiateNeedle();
-                iSinstantiated = true;
-            }
-                    
-            if( Input.GetMouseButtonDown(0) ){
-                needleMoving = true;
-                iSinstantiated = false;
-                MoveNeedle();
-            }*/
-            
-            /*if( Input.GetMouseButtonDown(0) && Time.time - lastMoveTime > SpawnPeriod ){
-                lastMoveTime = Time.time;
-                InstantiateNeedle();
-                MoveNeedle();
-            }*/
         }
         
         void InstantiateNeedle(){
