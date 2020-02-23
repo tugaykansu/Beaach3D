@@ -13,8 +13,7 @@ public class NeedleSpawnerBehaviour : MonoBehaviour
         private bool iSinstantiated = true;
         
         void Start(){
-            //instantiated = Instantiate(NeedlePrefab, new Vector3(0, 0, -15), Quaternion.identity);
-			instantiated = Instantiate(NeedlePrefab, new Vector3(0, 0, -15), new Quaternion(-90, 0, 0, 0));
+            instantiated = Instantiate(NeedlePrefab, new Vector3(0, 0, -15), Quaternion.identity);
         }
     
         void Update()
